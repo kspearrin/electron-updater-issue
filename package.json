@@ -1,6 +1,6 @@
 {
   "name": "electron-updater-example",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "main": "main.js",
   "description": "electron-updater example project",
   "author": "Matt Haggard",
@@ -9,12 +9,12 @@
     "electron": "electron ."
   },
   "devDependencies": {
-    "electron": "3.0.13",
-    "electron-builder": "20.31.2"
+    "electron": "3.0.14",
+    "electron-builder": "20.38.5"
   },
   "dependencies": {
     "electron-log": "^1.3.0",
-    "electron-updater": "3.0.3"
+    "electron-updater": "4.0.6"
   },
   "build": {
     "appId": "com.github.kspearrin.electronupdaterexample",
