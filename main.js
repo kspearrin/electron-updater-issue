@@ -137,6 +137,7 @@ app.on('ready', function()  {
 // })
 // autoUpdater.on('download-progress', (progressObj) => {
 // })
-// autoUpdater.on('update-downloaded', (info) => {
-//   autoUpdater.quitAndInstall();  
-// })
+
+autoUpdater.on('update-downloaded', (info) => {
+   autoUpdater.quitAndInstall(false, true);
+});
