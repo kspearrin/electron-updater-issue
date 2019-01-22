@@ -1,11 +1,11 @@
 {
   "name": "electron-updater-example",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "main.js",
   "description": "electron-updater example project",
   "author": "Matt Haggard",
   "scripts": {
-    "publish": "build -p always",
+    "publish": "build --win --x64 --ia32 -p always -c.win.certificateSubjectName=\"8bit Solutions LLC\"",
     "electron": "electron ."
   },
   "devDependencies": {
