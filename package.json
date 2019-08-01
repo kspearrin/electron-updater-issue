@@ -5,7 +5,8 @@
   "description": "electron-updater example project",
   "author": "Matt Haggard",
   "scripts": {
-    "publish": "build --win --x64 --ia32 -p always -c.win.certificateSubjectName=\"8bit Solutions LLC\"",
+    "publish:win": "build --win --x64 --ia32 -p always -c.win.certificateSubjectName=\"8bit Solutions LLC\"",
+    "publish:mac": "build --mac -p always",
     "electron": "electron ."
   },
   "devDependencies": {
@@ -19,7 +20,7 @@
   "build": {
     "appId": "com.github.kspearrin.electronupdaterexample",
     "mac": {
-      "category": "your.app.category.type",
+      "category": "public.app-category.productivity",
       "target": [
         "zip",
         "dmg"
