@@ -1,21 +1,21 @@
 {
   "name": "electron-updater-example",
-  "version": "3.0.3",
+  "version": "4.0.0",
   "main": "main.js",
   "description": "electron-updater example project",
   "author": "Matt Haggard",
   "scripts": {
-    "publish:win": "build --win --x64 --ia32 -p always -c.win.certificateSubjectName=\"8bit Solutions LLC\"",
-    "publish:mac": "build --mac -p always",
+    "publish:win": "electron-builder --win --x64 --ia32 -p always -c.win.certificateSubjectName=\"8bit Solutions LLC\"",
+    "publish:mac": "electron-builder --mac -p always",
     "electron": "electron ."
   },
   "devDependencies": {
-    "electron": "3.0.14",
-    "electron-builder": "20.38.5"
+    "electron": "5.0.8",
+    "electron-builder": "21.1.5"
   },
   "dependencies": {
-    "electron-log": "^1.3.0",
-    "electron-updater": "4.0.6"
+    "electron-log": "2.2.17",
+    "electron-updater": "4.1.2"
   },
   "build": {
     "appId": "com.github.kspearrin.electronupdaterexample",
