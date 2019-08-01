@@ -9,7 +9,7 @@ exports.default = async function notarizing(context) {
     const appleId = process.env.APPLEID;
     const appName = context.packager.appInfo.productFilename;
     return await notarize({
-        appBundleId: 'com.bitwarden.desktop',
+        appBundleId: 'com.github.kspearrin.electronupdaterexample',
         appPath: `${appOutDir}/${appName}.app`,
         appleId: appleId,
         appleIdPassword: `@keychain:AC_PASSWORD`,
