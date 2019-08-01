@@ -1,12 +1,13 @@
 {
   "name": "electron-updater-example",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "main": "main.js",
   "description": "electron-updater example project",
   "author": "Matt Haggard",
   "scripts": {
     "publish:win": "electron-builder --win --x64 --ia32 -p always -c.win.certificateSubjectName=\"8bit Solutions LLC\"",
     "publish:mac": "electron-builder --mac -p always",
+    "dist:mac": "electron-builder --mac -p never",
     "electron": "electron ."
   },
   "devDependencies": {
@@ -18,9 +19,17 @@
     "electron-updater": "4.1.2"
   },
   "build": {
+    "directories": {
+      "buildResources": "resources"
+    },
     "appId": "com.github.kspearrin.electronupdaterexample",
     "mac": {
       "category": "public.app-category.productivity",
+      "darkModeSupport": true,
+      "gatekeeperAssess": false,
+      "hardenedRuntime": true,
+      "entitlements": "resources/entitlements.mac.plist",
+      "entitlementsInherit": "resources/entitlements.mac.plist",
       "target": [
         "zip",
         "dmg"
